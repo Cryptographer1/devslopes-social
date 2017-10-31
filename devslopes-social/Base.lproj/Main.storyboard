@@ -89,7 +89,7 @@
                                         <rect key="frame" x="0.0" y="40" width="283" height="25"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcV-O1-ImX" customClass="FancyBtn" customModule="devslopes_social" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="80" width="283" height="37"/>
@@ -98,6 +98,9 @@
                                         <state key="normal" title="Sign In">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ToL-RD-cNc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -121,6 +124,10 @@
                             <constraint firstItem="Ic9-8O-oO2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="seo-Va-NJK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="rjA-CT-bro" id="aHP-ez-8xv"/>
+                        <outlet property="pwdField" destination="5PJ-M9-cP3" id="OeP-Dw-pcE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

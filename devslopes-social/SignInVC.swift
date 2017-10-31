@@ -10,6 +10,9 @@ import UIKit
 import Firebase
 
 class SignInVC: UIViewController {
+    
+    @IBOutlet weak var emailField: FancyField!    
+    @IBOutlet weak var pwdField: FancyField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +49,24 @@ class SignInVC: UIViewController {
                     print("WINEGAR: Successfully authenticated with Firebase")
                 }
                 
+            })
+        }
+    }
+    @IBAction func signInTapped(_ sender: Any) {
+        
+        if let email = emailField.text, let pwd = pwdField.text {
+            Auth.auth().signIn(withEmail: email, password: pwd, completion: { (user, error) in
+                if error == nil {
+                    print("WINEGAR: Email user authenticated with Firebase")
+                } else {
+                    Auth.auth().createUser(withEmail: email, password: pwd, completion: { (user, error) in
+                        if error != nil {
+                            print("WINEGAR: Unable to authenticate with Firebase using email")
+                        } else {
+                            print("WINEGAR: Successfully authenticated with Firebase")
+                        }
+                    })
+                }
             })
         }
     }
