@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17A405" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17B48" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -43,6 +43,14 @@
                                         <rect key="frame" x="8" y="8" width="359" height="59"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You must sign in with a valid email address, and your password must contain at least six characters." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAy-tX-Qzq">
+                                        <rect key="frame" x="8" y="8" width="359" height="59"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.86666666670000003" green="0.17254901959999999" blue="0.0" alpha="0.86675941779999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -126,7 +134,10 @@
                     </view>
                     <connections>
                         <outlet property="emailField" destination="rjA-CT-bro" id="aHP-ez-8xv"/>
+                        <outlet property="errorLbl" destination="fAy-tX-Qzq" id="DbR-Ox-B7X"/>
+                        <outlet property="footerView" destination="Ic9-8O-oO2" id="rJL-qX-yzh"/>
                         <outlet property="pwdField" destination="5PJ-M9-cP3" id="OeP-Dw-pcE"/>
+                        <outlet property="signInLbl" destination="ixk-xR-Ib2" id="zUn-gy-7fZ"/>
                         <segue destination="uwN-JH-ZJO" kind="show" identifier="goToFeed" id="dT9-JJ-gq9"/>
                     </connections>
                 </viewController>
@@ -324,6 +335,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="caption" destination="aqk-L7-Iu0" id="avn-UH-6Yl"/>
+                                            <outlet property="likeImg" destination="w5l-Zd-zoj" id="7BW-GE-wIe"/>
                                             <outlet property="likesLbl" destination="Ka4-vW-Nr4" id="yDU-in-xMh"/>
                                             <outlet property="postImg" destination="dce-JE-7xp" id="fWw-EF-Ei2"/>
                                             <outlet property="profileImg" destination="mmd-oV-agZ" id="xco-Zg-pU5"/>

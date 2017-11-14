@@ -1,0 +1,15 @@
+# pack-refs with: peeled fully-peeled 
+ba84c90ea27bb0a30668a745cf802345d104ec9e refs/heads/email-auth
+3e6c28d63def582ac91f091e1cf9521e8da1d2db refs/heads/facebook-auth
+089fe3e80804c2f84a988f392562da82365a164e refs/heads/feed-table
+4ae2c77e33eb7845d9d40bc2cff9fa599ba6b21a refs/heads/feed-ui
+05fa20be8fb38583e6229779bb880158d797d177 refs/heads/firebase-display
+7b1c9ee64ffa6b04299a791a8d5c7edf44dc6018 refs/heads/firebase-get
+4580f7c9b0ed6f7efe072df845a91ef750e5b5c8 refs/heads/firebase-setup
+3dedf495734364a9e8fc870cf5035efcc722bd17 refs/heads/firebase-storage-down
+f05bed2bd9b3a4f576bb680055fd4b7f1aeeb4e4 refs/heads/firebase-upload
+8b3eaeeea828c42850285daf402193f6fd23d062 refs/heads/firebase-users
+b43c7bce8f573e49c40faed6a4005974333001cf refs/heads/master
+516edd40caf8a6eea0f7e04a55205236545cb7d7 refs/heads/post-func
+fda353f2b9d3e70573b35edcd435ab98b92329da refs/heads/sign-in-ui
+e1ba991c621436a32564228fb39d53159f25cf58 refs/heads/sign-in-ui-custom

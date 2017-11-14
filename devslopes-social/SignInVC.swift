@@ -14,6 +14,9 @@ class SignInVC: UIViewController {
     
     @IBOutlet weak var emailField: FancyField!    
     @IBOutlet weak var pwdField: FancyField!
+    @IBOutlet weak var signInLbl: UILabel!
+    @IBOutlet weak var errorLbl: UILabel!
+    @IBOutlet weak var footerView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,6 +77,9 @@ class SignInVC: UIViewController {
                 } else {
                     Auth.auth().createUser(withEmail: email, password: pwd, completion: { (user, error) in
                         if error != nil {
+                            self.errorLbl.isHidden = false
+                            self.footerView.backgroundColor = UIColor(red: 0.87, green: 0.17, blue: 0.00, alpha: 1.0)
+                            self.signInLbl.isHidden = true
                             print("WINEGAR: Unable to authenticate with Firebase using email")
                         } else {
                             print("WINEGAR: Successfully authenticated with Firebase")
