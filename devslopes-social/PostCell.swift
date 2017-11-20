@@ -29,6 +29,7 @@ class PostCell: UITableViewCell {
         likeImg.addGestureRecognizer(tap)
         likeImg.isUserInteractionEnabled = true
         
+        
     }
 
     func configureCell(post: Post, img: UIImage? = nil) {

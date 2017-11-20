@@ -474,10 +474,14 @@
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="ivg-mN-6HQ" customClass="CircleView" customModule="devslopes_social" customModuleProvider="target">
                                 <rect key="frame" x="97" y="230" width="180" height="180"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="1Lt-aB-o4N"/>
                                     <constraint firstAttribute="height" constant="180" id="RQa-f4-UVJ"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="l1r-BG-LuM" appends="YES" id="UD2-KP-pMY"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -507,6 +511,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gce-b4-qI9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="l1r-BG-LuM"/>
             </objects>
             <point key="canvasLocation" x="1446" y="145"/>
         </scene>
