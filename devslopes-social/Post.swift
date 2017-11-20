@@ -65,3 +65,22 @@ class Post {
         _postRef.child("likes").setValue(_likes)
     }
 }
+
+
+class Profile {
+    private var _username: String!
+    private var _imageUrl: String!
+    
+    var username: String {
+        return _username
+    }
+    
+    var imageUrl: String {
+        return _imageUrl
+    }
+    
+    init(username: String, imageUrl: String) {
+        self._username = username
+        self._imageUrl = imageUrl
+    }
+}

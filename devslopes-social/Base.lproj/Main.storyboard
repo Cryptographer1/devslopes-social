@@ -380,10 +380,10 @@
             </objects>
             <point key="canvasLocation" x="669.60000000000002" y="145.27736131934034"/>
         </scene>
-        <!--View Controller-->
+        <!--ProfileVC-->
         <scene sceneID="qIO-NJ-qW8">
             <objects>
-                <viewController id="6j0-d1-emL" sceneMemberID="viewController">
+                <viewController id="6j0-d1-emL" customClass="ProfileVC" customModule="devslopes_social" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hZk-xt-3uy"/>
                         <viewControllerLayoutGuide type="bottom" id="fy5-vd-Wyj"/>
@@ -419,6 +419,27 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You must select an image." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qp-tP-3Fy">
+                                        <rect key="frame" x="8" y="8" width="359" height="59"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have selected an invalid image." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6W-Ex-1Ow">
+                                        <rect key="frame" x="8" y="8" width="359" height="59"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You must enter a username." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5d-zq-wtA">
+                                        <rect key="frame" x="8" y="8" width="359" height="59"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -429,16 +450,16 @@
                                     <constraint firstItem="GJa-BV-LOJ" firstAttribute="top" secondItem="aJz-6l-6LD" secondAttribute="top" constant="8" id="xql-t3-uks"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KLa-hT-wQf">
-                                <rect key="frame" x="46" y="439" width="283" height="77"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KLa-hT-wQf">
+                                <rect key="frame" x="46" y="450" width="283" height="77"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AtC-He-kKC" customClass="FancyField" customModule="devslopes_social" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AtC-He-kKC" customClass="FancyField" customModule="devslopes_social" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="283" height="25"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D11-qs-7Bt" customClass="FancyBtn" customModule="devslopes_social" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D11-qs-7Bt" customClass="FancyBtn" customModule="devslopes_social" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="40" width="283" height="37"/>
                                         <color key="backgroundColor" red="0.86666666670000003" green="0.17254901959999999" blue="0.0" alpha="0.86675941779999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
@@ -451,24 +472,39 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ivg-mN-6HQ">
-                                <rect key="frame" x="127" y="229" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="ivg-mN-6HQ" customClass="CircleView" customModule="devslopes_social" customModuleProvider="target">
+                                <rect key="frame" x="97" y="230" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="1Lt-aB-o4N"/>
+                                    <constraint firstAttribute="height" constant="180" id="RQa-f4-UVJ"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="KLa-hT-wQf" firstAttribute="centerX" secondItem="rYF-cj-XIr" secondAttribute="centerX" id="675-Vb-2E2"/>
+                            <constraint firstItem="ivg-mN-6HQ" firstAttribute="centerX" secondItem="rYF-cj-XIr" secondAttribute="centerX" id="DMZ-mW-YvE"/>
                             <constraint firstItem="CCA-6Z-ma4" firstAttribute="top" secondItem="rYF-cj-XIr" secondAttribute="top" id="E1T-wy-M9a"/>
                             <constraint firstAttribute="trailing" secondItem="CCA-6Z-ma4" secondAttribute="trailing" id="ENX-pO-n5y"/>
+                            <constraint firstItem="ivg-mN-6HQ" firstAttribute="top" secondItem="CCA-6Z-ma4" secondAttribute="bottom" constant="80" id="IpN-jI-5PO"/>
                             <constraint firstItem="KLa-hT-wQf" firstAttribute="leading" secondItem="rYF-cj-XIr" secondAttribute="leadingMargin" constant="30" id="JdH-QC-Md4"/>
                             <constraint firstItem="fy5-vd-Wyj" firstAttribute="top" secondItem="aJz-6l-6LD" secondAttribute="bottom" id="JuJ-U1-2yr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KLa-hT-wQf" secondAttribute="trailing" constant="30" id="T0b-Xq-IK5"/>
                             <constraint firstItem="CCA-6Z-ma4" firstAttribute="leading" secondItem="rYF-cj-XIr" secondAttribute="leading" id="TbR-2O-AYW"/>
                             <constraint firstAttribute="trailing" secondItem="aJz-6l-6LD" secondAttribute="trailing" id="ZeG-MZ-Aus"/>
                             <constraint firstItem="aJz-6l-6LD" firstAttribute="leading" secondItem="rYF-cj-XIr" secondAttribute="leading" id="f86-8g-kFD"/>
+                            <constraint firstItem="KLa-hT-wQf" firstAttribute="top" secondItem="ivg-mN-6HQ" secondAttribute="bottom" constant="40" id="tZG-O4-4Af"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="footerView" destination="aJz-6l-6LD" id="3II-lJ-BHh"/>
+                        <outlet property="imageLbl" destination="1qp-tP-3Fy" id="DsY-ZB-W8W"/>
+                        <outlet property="invalidImgLbl" destination="g6W-Ex-1Ow" id="ccJ-A7-29b"/>
+                        <outlet property="profileImage" destination="ivg-mN-6HQ" id="FSG-qY-a5W"/>
+                        <outlet property="profileLbl" destination="GJa-BV-LOJ" id="lQt-XW-BtO"/>
+                        <outlet property="usernameField" destination="AtC-He-kKC" id="wdc-bV-Gh3"/>
+                        <outlet property="usernameLbl" destination="s5d-zq-wtA" id="pQg-2E-nRa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gce-b4-qI9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -483,6 +519,7 @@
         <image name="f" width="352" height="328"/>
         <image name="placeholder" width="567" height="312"/>
         <image name="profile" width="113" height="155"/>
+        <image name="profile-placeholder" width="1040" height="1040"/>
         <image name="sign-out" width="92" height="65"/>
     </resources>
 </document>
