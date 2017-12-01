@@ -19,6 +19,7 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var likeImg: UIImageView!
     
     var post: Post!
+    var proVC: ProfileVC!
     var likesRef: DatabaseReference!
 
     override func awakeFromNib() {
@@ -29,7 +30,8 @@ class PostCell: UITableViewCell {
         likeImg.addGestureRecognizer(tap)
         likeImg.isUserInteractionEnabled = true
         
-        
+//        profileImg.image = FeedVC.imageCache.object(forKey: Auth.auth().currentUser?.uid as! NSString)
+//        usernameLbl.text = proVC.usernameField.text
     }
 
     func configureCell(post: Post, img: UIImage? = nil) {
@@ -67,7 +69,7 @@ class PostCell: UITableViewCell {
         })
     }
     
-    func likeTapped(sender: UITapGestureRecognizer) {
+    @objc func likeTapped(sender: UITapGestureRecognizer) {
         likesRef.observeSingleEvent(of: .value, with: { (snapshot) in
             if let _ = snapshot.value as? NSNull {
                 self.likeImg.image = UIImage(named: "filled-heart")

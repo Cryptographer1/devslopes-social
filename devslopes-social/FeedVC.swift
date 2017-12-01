@@ -145,5 +145,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         performSegue(withIdentifier: "goToSignIn", sender: nil)
     }
     
-    
+    @IBAction func editProfileTapped(_ sender: Any) {
+        performSegue(withIdentifier: "goToProfileFVC", sender: nil)
+    }
 }

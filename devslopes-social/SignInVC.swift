@@ -17,6 +17,9 @@ class SignInVC: UIViewController {
     @IBOutlet weak var signInLbl: UILabel!
     @IBOutlet weak var errorLbl: UILabel!
     @IBOutlet weak var footerView: UIView!
+    
+    var proVC: ProfileVC!
+    var post: PostCell!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,6 +76,7 @@ class SignInVC: UIViewController {
                     if let user = user {
                         let userData = ["provider": user.providerID]
                         self.completeSignIn(id: user.uid, userData: userData)
+                        self.performSegue(withIdentifier: "goToFeed", sender: nil)
                     }
                 } else {
                     Auth.auth().createUser(withEmail: email, password: pwd, completion: { (user, error) in
@@ -86,6 +90,7 @@ class SignInVC: UIViewController {
                             if let user = user {
                                 let userData = ["provider": user.providerID]
                                 self.completeSignIn(id: user.uid, userData: userData)
+                                self.performSegue(withIdentifier: "goToProfileSI", sender: nil)
                             }
                         }
                     })
@@ -98,7 +103,7 @@ class SignInVC: UIViewController {
         DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
         let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
         print("WINEGAR: Data saved to keychain \(keychainResult)")
-        performSegue(withIdentifier: "goToFeed", sender: nil)
+//        performSegue(withIdentifier: "goToFeed", sender: nil)
     }
 }
 
